@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="et">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minu Mängud</title>
+  <title>My-Games</title>
   <style>
     * {
       box-sizing: border-box;
@@ -60,7 +60,6 @@
       transform: scale(1.02);
     }
 
-    /* Mängu ekraan */
     #game-container {
       display: none;
       position: fixed;
@@ -78,7 +77,6 @@
       display: block;
     }
 
-    /* Väike tagasi-nupp üleval nurgas */
     #back-btn {
       position: fixed;
       top: 10px;
@@ -105,7 +103,7 @@
 <body>
 
   <div id="menu">
-    <h1>Vali mäng</h1>
+    <h1>Choose Ur Game</h1>
     <div class="game-list" id="game-list"></div>
   </div>
 
@@ -115,7 +113,6 @@
   </div>
 
   <script>
-    // LISA OMA MÄNGUDE FAILINIMED SIIA NIMEKIRJA (kaustast "games"):
     const gameFiles = [
       "a_Minceraft.html",
       "a_Halloween.html",
@@ -130,7 +127,6 @@
     const gameContainerEl = document.getElementById("game-container");
     const gameFrameEl = document.getElementById("game-frame");
 
-    // Loob nupud ja eemaldab nime lõpust ".html"
     gameFiles.forEach(file => {
       const cleanName = file.replace(/\.html$/i, "");
       const btn = document.createElement("button");
